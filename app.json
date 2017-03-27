@@ -2,7 +2,7 @@
   "name": "CreditScore Web + API",
   "description": "A barebones Python app, which can easily be deployed to Heroku.",
   "image": "heroku/python",
-  "repository": "https://bitbucket.org/Daveee/hackathon",
+  "repository": "https://github.com/kiidbrian/cscore_api",
   "keywords": ["python", "flask" ],
   "scripts": {
     "postdeploy": "python manage.py migrate && python manage.py upgrade"
