@@ -25,6 +25,13 @@ class User(BaseModel):
     last_login_at = db.Column(db.DateTime, nullable=True)
     activities = db.relationship('Activity', backref='user', cascade='all, delete-orphan')
 
+    def __init__(self, fullname, email):
+        self.fullname = fullname
+        self.email = email
+
+    def __repr__(self):
+        return '<User {0}, {1}>'.format(self.fullname, self.email)
+
     @property
     def password(self):
         raise AttributeError('password is not a readable attribue')
